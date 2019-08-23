@@ -1,4 +1,4 @@
-from jenkinsapi.jenkins import Jenkins #pip3 install jenkinsapi
+from jenkinsapi import Jenkins #pip3 install jenkinsapi
 import sys
 import xml.etree.ElementTree as ET
 from pexpect import pxssh # pip3 install pexpect
