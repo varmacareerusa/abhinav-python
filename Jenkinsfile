@@ -52,7 +52,6 @@ node(){
 }
 
 def install(){
-    sh "python"
     sh "pip install pexpect"
     sh "pip install python-jenkins"
     sh "pip install jenkinsapi"
