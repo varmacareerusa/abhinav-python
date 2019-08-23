@@ -1,4 +1,5 @@
 node(){
+    tool name: 'Python', type: 'jenkins.plugins.shiningpanda.tools.PythonInstallation'
     try{
         properties([
             parameters([
