@@ -21,9 +21,9 @@ node(){
         }
 
         stage('Install Python Modules'){
-            def pexpect = bat returnStatus: true, script: 'python -c "import pexpect"'
-            def jenkins = bat returnStatus: true, script: 'python -c "import jenkins"'
-            def jenkinsapi = bat returnStatus: true, script: 'python -c "import jenkinsapi"'
+            def pexpect = sh returnStatus: true, script: 'python -c "import pexpect"'
+            def jenkins = sh returnStatus: true, script: 'python -c "import jenkins"'
+            def jenkinsapi = sh returnStatus: true, script: 'python -c "import jenkinsapi"'
             if (pexpect == 1 || jenkins == 1 || jenkinsapi == 1){
                 install()
                 echo "Installed Successfully"    
@@ -53,7 +53,7 @@ node(){
 }
 
 def install(){
-    bat'pip install pexpect'
-    bat'pip install python-jenkins'
-    bat 'pip install jenkinsapi'
+    sh "pip install pexpect"
+    sh "pip install python-jenkins"
+    sh "pip install jenkinsapi"
 }
