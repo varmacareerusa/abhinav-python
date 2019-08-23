@@ -20,16 +20,16 @@ node(){
         }
 
         stage('Install Python Modules'){
-            def pexpect = sh returnStatus: true, script: 'python -c "import pexpect"'
-            def jenkins = sh returnStatus: true, script: 'python -c "import jenkins"'
-            def jenkinsapi = sh returnStatus: true, script: 'python -c "import jenkinsapi"'
-            if (pexpect == 1 || jenkins == 1 || jenkinsapi == 1){
+           // def pexpect = sh returnStatus: true, script: 'python -c "import pexpect"'
+           // def jenkins = sh returnStatus: true, script: 'python -c "import jenkins"'
+           // def jenkinsapi = sh returnStatus: true, script: 'python -c "import jenkinsapi"'
+           // if (pexpect == 1 || jenkins == 1 || jenkinsapi == 1){
                 install()
                 echo "Installed Successfully"    
             }
-            else
-            echo "Already Installed"
-        }	
+            //else
+            //echo "Already Installed"
+        }//	
         // Store GoldCopy Master Password in GoldCopy_Password secret variable 
         // Store Remote Jenkins Master Password in Remote_Password secret variable
         // Store Remote Machine Password in Remote_vm_Password secret variable
